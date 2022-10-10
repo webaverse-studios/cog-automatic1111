@@ -1,3 +1,6 @@
+stable-diffusion-webui/
+stable_diffusion_webui/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
