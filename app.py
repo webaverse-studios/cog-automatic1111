@@ -5,10 +5,15 @@ from fastapi.responses import FileResponse
 from pydantic import BaseModel
 from omegaconf import OmegaConf
 import random
+import os
+import sys
 
-from stable_diffusion_webui.modules.processing import StableDiffusionProcessing
-from stable_diffusion_webui.modules.processing import StableDiffusionProcessingTxt2Img
-from stable_diffusion_webui.modules.processing import StableDiffusionProcessingImg2Img
+sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), "stable_diffusion_webui"))
+from modules.processing import StableDiffusionProcessing
+#from modules.processing import StableDiffusionProcessingTxt2Img
+#from modules.processing import StableDiffusionProcessingImg2Img
+
+#os.chdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), "stable_diffusion_webui"))
 
 class Generation(BaseModel):
     model: Optional[str] = "sd-v1-4"
